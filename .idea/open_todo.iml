@@ -214,6 +214,26 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="babel-source (vbundled(5.8.35), /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/babel-source-5.8.35) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/babel-source-5.8.35/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/babel-source-5.8.35/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="babel-transpiler (vbundled(0.7.0), /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/babel-transpiler-0.7.0) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/babel-transpiler-0.7.0/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/babel-transpiler-0.7.0/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="binding_of_caller (vbundled(0.7.2), /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.7.2) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext" />
@@ -426,6 +446,22 @@
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/figaro-1.1.1/bin" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/figaro-1.1.1/lib" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/figaro-1.1.1/gemfiles" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="foundation-rails (vbundled(6.3.1.0), /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/foundation-rails-6.3.1.0) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/foundation-rails-6.3.1.0/app" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/foundation-rails-6.3.1.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/foundation-rails-6.3.1.0/config" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/foundation-rails-6.3.1.0/vendor" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/foundation-rails-6.3.1.0/app" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/foundation-rails-6.3.1.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/foundation-rails-6.3.1.0/config" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/foundation-rails-6.3.1.0/vendor" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -858,6 +894,16 @@
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/sprockets-3.7.1/bin" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/sprockets-3.7.1/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="sprockets-es6 (vbundled(0.9.2), /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/sprockets-es6-0.9.2) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/sprockets-es6-0.9.2/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/sprockets-es6-0.9.2/lib" />
         </SOURCES>
       </library>
     </orderEntry>
