@@ -4,7 +4,7 @@ class Api::V1::UsersController < Api::V1::BaseController
 
    def index
      users = User.all
-     render json: topics, status: 200
+     render json: users, status: 200
    end
 
    def show
