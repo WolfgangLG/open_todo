@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::ItemsController, type: :controller do
- let (:user) { User.create!(name: "Testy Tester", email: "tester@testy.com", password_digest: "password") }
- let (:my_list) { user.lists.create!(title: "My Todo list", description: "This is a todo list example description", user: user) }
- let!(:my_item) { my_list.items.create!(name: "To do list item name", body: "To do list item body example", list: my_list) }
+ let(:user) { create(:user) }
+ let(:my_list) { create(:list, user: user) }
+ let!(:my_item) { create(:item, list: my_list) }
 
    describe "GET index" do
      before { get :index }

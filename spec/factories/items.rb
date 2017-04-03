@@ -1,5 +1,7 @@
 FactoryGirl.define do
   factory :item do
-    list nil
+    list
+    name Faker::Name.name
+    body Faker::Hipster.paragraph(2)
   end
 end

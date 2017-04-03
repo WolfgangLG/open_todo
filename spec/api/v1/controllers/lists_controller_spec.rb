@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::ListsController, type: :controller do
- let (:user) { User.create!(name: "Testy Tester", email: "tester@testy.com", password_digest: "password") }
- let!(:my_list) { user.lists.create!(title: "My Todo list", description: "This is a todo list example description", user: user, public: true) }
+  let(:user) { create(:user) }
+  let(:my_list) { create(:list, user: user) }
 
    describe "GET index" do
      before { get :index }

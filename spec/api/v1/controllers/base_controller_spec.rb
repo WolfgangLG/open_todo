@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::BaseController, type: :controller do
-  let (:user) { User.create!(name: "Testy Tester", email: "tester@testy.com", password_digest: "password") }
+  let(:user) { create(:user) }
 
 #  context "authorized user" do
 #    before do
