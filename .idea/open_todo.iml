@@ -152,6 +152,20 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="active_model_serializers (vbundled(0.10.5), /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/active_model_serializers-0.10.5) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/active_model_serializers-0.10.5/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/active_model_serializers-0.10.5/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/active_model_serializers-0.10.5/.github" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/active_model_serializers-0.10.5/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/active_model_serializers-0.10.5/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/active_model_serializers-0.10.5/.github" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="activejob (vbundled(4.2.7), /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/activejob-4.2.7) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/activejob-4.2.7/lib" />
@@ -284,6 +298,16 @@
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/bin" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/ext" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="case_transform (vbundled(0.2), /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/case_transform-0.2) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/case_transform-0.2/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/case_transform-0.2/lib" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -518,6 +542,16 @@
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/tests" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/tools" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/diagrams" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jsonapi-renderer (vbundled(0.1.2), /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/jsonapi-renderer-0.1.2) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/jsonapi-renderer-0.1.2/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.3.0/gems/jsonapi-renderer-0.1.2/lib" />
         </SOURCES>
       </library>
     </orderEntry>
