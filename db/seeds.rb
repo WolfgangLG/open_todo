@@ -28,7 +28,7 @@ lists = List.all
 50.times do
   Item.create!(
     list:   lists.sample,
-    name:   Faker::Name.name,
+    name:   Faker::Lorem.word,
     body:   Faker::Hipster.paragraph(2)
   )
 end
