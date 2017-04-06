@@ -1,10 +1,9 @@
 class Api::V1::UsersController < Api::V1::BaseController
-  #  before_action :authenticate_user, except: [:index, :show]
-  #  before_action :authorize_user, except: [:index, :show]
+   before_action :authenticated?
 
    def index
      users = User.all
-     render json: users, status: 200
+     render json: users, each_serializer: UserSerializer, status: 200
    end
 
    def show
