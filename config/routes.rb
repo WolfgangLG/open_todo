@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  namespace :api do
+  namespace :api, defaults: { format: :json } do
      namespace :v1 do
        resources :users, only: [:index, :show]
        resources :lists, only: [:index, :show]
