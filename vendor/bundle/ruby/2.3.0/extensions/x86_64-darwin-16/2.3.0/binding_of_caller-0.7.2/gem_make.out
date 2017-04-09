@@ -1,5 +1,5 @@
 current directory: /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
-/usr/local/opt/ruby/bin/ruby -r ./siteconf20170330-49642-n331ko.rb extconf.rb
+/Users/Ludwig/.rvm/rubies/ruby-2.3.1/bin/ruby -r ./siteconf20170409-78527-hsnppp.rb extconf.rb
 
 current directory: /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
 make "DESTDIR=" clean

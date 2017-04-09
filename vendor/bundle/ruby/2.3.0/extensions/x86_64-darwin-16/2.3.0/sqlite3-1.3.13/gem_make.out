@@ -1,5 +1,7 @@
 current directory: /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/sqlite3-1.3.13/ext/sqlite3
-/usr/local/opt/ruby/bin/ruby -r ./siteconf20170330-49642-174qxbg.rb extconf.rb
+/Users/Ludwig/.rvm/rubies/ruby-2.3.1/bin/ruby -r ./siteconf20170409-78527-1vfuet1.rb extconf.rb
+Ignoring binding_of_caller-0.7.2 because its extensions are not built.  Try: gem pristine binding_of_caller --version 0.7.2
+Ignoring nokogiri-1.7.1 because its extensions are not built.  Try: gem pristine nokogiri --version 1.7.1
 checking for sqlite3.h... yes
 checking for pthread_create() in -lpthread... yes
 checking for sqlite3_libversion_number() in -lsqlite3... yes
@@ -16,10 +18,6 @@ checking for sqlite3_int64 in sqlite3.h... yes
 checking for sqlite3_uint64 in sqlite3.h... yes
 creating Makefile
 
-To see why this extension failed to compile, please check the mkmf.log which can be found here:
-
-  /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/extensions/x86_64-darwin-15/2.3.0/sqlite3-1.3.13/mkmf.log
-
 current directory: /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/sqlite3-1.3.13/ext/sqlite3
 make "DESTDIR=" clean
 
@@ -34,4 +32,4 @@ linking shared-object sqlite3/sqlite3_native.bundle
 
 current directory: /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/sqlite3-1.3.13/ext/sqlite3
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 sqlite3_native.bundle ./.gem.20170330-49642-5f073d/sqlite3
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 sqlite3_native.bundle ./.gem.20170409-78527-q62b16/sqlite3

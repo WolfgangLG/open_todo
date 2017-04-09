@@ -1,5 +1,9 @@
 current directory: /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
-/usr/local/opt/ruby/bin/ruby -r ./siteconf20170330-49642-oek2n4.rb extconf.rb
+/Users/Ludwig/.rvm/rubies/ruby-2.3.1/bin/ruby -r ./siteconf20170409-78527-1jwljv6.rb extconf.rb
+Ignoring binding_of_caller-0.7.2 because its extensions are not built.  Try: gem pristine binding_of_caller --version 0.7.2
+Ignoring byebug-9.0.6 because its extensions are not built.  Try: gem pristine byebug --version 9.0.6
+Ignoring nokogiri-1.7.1 because its extensions are not built.  Try: gem pristine nokogiri --version 1.7.1
+Ignoring sqlite3-1.3.13 because its extensions are not built.  Try: gem pristine sqlite3 --version 1.3.13
 creating Makefile
 
 current directory: /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
@@ -12,4 +16,4 @@ linking shared-object debug_inspector.bundle
 
 current directory: /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20170330-49642-1tq4oj4
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 debug_inspector.bundle ./.gem.20170409-78527-1gxuaj8
