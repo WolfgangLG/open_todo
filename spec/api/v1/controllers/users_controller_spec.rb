@@ -21,7 +21,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
         expect(response.content_type).to eq 'application/json'
       end
 
-      it "creates a post with the correct attributes" do
+      it "creates a user with the correct attributes" do
         expect(json["name"]).to eq(@new_user.name)
         expect(json["email"]).to eq(@new_user.email)
       end

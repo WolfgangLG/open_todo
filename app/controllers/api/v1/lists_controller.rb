@@ -3,8 +3,7 @@ class Api::V1::ListsController < Api::V1::BaseController
   before_action :set_user
 
   def create
-    user = User.find(params[:user_id])
-    list = user.lists.new(list_params)
+    list = @user.lists.new(list_params)
     if list.valid?
       list.save!
       render json: list, status: 200

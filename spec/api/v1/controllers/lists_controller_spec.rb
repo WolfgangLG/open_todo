@@ -23,7 +23,7 @@ RSpec.describe Api::V1::ListsController, type: :controller do
         expect(response.content_type).to eq 'application/json'
       end
 
-      it "creates a post with the correct attributes" do
+      it "creates a list with the correct attributes" do
         expect(json["title"]).to eq(@new_list.title)
         expect(json["description"]).to eq(@new_list.description)
       end
