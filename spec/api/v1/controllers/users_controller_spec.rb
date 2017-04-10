@@ -22,9 +22,8 @@ RSpec.describe Api::V1::UsersController, type: :controller do
       end
 
       it "creates a post with the correct attributes" do
-        hashed_json = JSON.parse(response.body)
-        expect(hashed_json["name"]).to eq(@new_user.name)
-        expect(hashed_json["email"]).to eq(@new_user.email)
+        expect(json["name"]).to eq(@new_user.name)
+        expect(json["email"]).to eq(@new_user.email)
       end
     end
 

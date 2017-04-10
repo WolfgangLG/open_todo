@@ -1,14 +1,35 @@
 class Api::V1::ListsController < Api::V1::BaseController
-  #  before_action :authenticate_user, except: [:index, :show]
-  #  before_action :authorize_user, except: [:index, :show]
+  before_action :authenticated?
+  before_action :set_user
 
-   def index
-     lists = List.all
-     render json: lists, status: 200
-   end
+  def create
+    user = User.find(params[:user_id])
+    list = user.lists.new(list_params)
+    if list.valid?
+      list.save!
+      render json: list, status: 200
+    else
+      render json: { errors: list.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
 
-   def show
-     list = List.find(params[:id])
-     render json: list, status: 200
-   end
- end
+  def index
+    lists = @user.lists.all
+    render json: lists, each_serializer: ListSerializer, status: 200
+  end
+
+  def show
+    list = List.find(params[:id])
+    render json: list, status: 200
+  end
+
+  private
+
+  def set_user
+    @user = User.find(params[:user_id])
+  end
+
+  def list_params
+    params.require(:list).permit(:title, :description, :user_id)
+  end
+end
