@@ -1,0 +1,18 @@
+current directory: /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/ext/json
+/Users/Ludwig/.rvm/rubies/ruby-2.3.1/bin/ruby -r ./siteconf20170409-78527-17k19kw.rb extconf.rb --use-system-libraries
+Ignoring binding_of_caller-0.7.2 because its extensions are not built.  Try: gem pristine binding_of_caller --version 0.7.2
+Ignoring byebug-9.0.6 because its extensions are not built.  Try: gem pristine byebug --version 9.0.6
+Ignoring debug_inspector-0.0.2 because its extensions are not built.  Try: gem pristine debug_inspector --version 0.0.2
+Ignoring nokogiri-1.7.1 because its extensions are not built.  Try: gem pristine nokogiri --version 1.7.1
+Ignoring sqlite3-1.3.13 because its extensions are not built.  Try: gem pristine sqlite3 --version 1.3.13
+creating Makefile
+
+current directory: /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/Ludwig/workspace/bloc/code/open_todo/vendor/bundle/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" install

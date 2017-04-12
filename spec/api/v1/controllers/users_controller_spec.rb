@@ -7,6 +7,24 @@ RSpec.describe Api::V1::UsersController, type: :controller do
   context "authenticated user" do
     before do
       controller.request.env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Basic.encode_credentials(user.name, user.password_digest)
+      @new_user = build(:user)
+    end
+
+    describe "POST create" do
+      before { post :create, user: { name: @new_user.name, password_digest: @new_user.password_digest, email: @new_user.email } }
+
+      it "returns http success" do
+        expect(response).to have_http_status(:success)
+      end
+
+      it "returns json content type" do
+        expect(response.content_type).to eq 'application/json'
+      end
+
+      it "creates a user with the correct attributes" do
+        expect(json["name"]).to eq(@new_user.name)
+        expect(json["email"]).to eq(@new_user.email)
+      end
     end
 
     describe "GET index" do
