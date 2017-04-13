@@ -22,6 +22,16 @@ class Api::V1::UsersController < Api::V1::BaseController
     render json: user, status: 200
   end
 
+  def destroy
+     begin
+       user = User.find(params[:id])
+       user.destroy
+       render json: {}, status: :success
+     rescue ActiveRecord::RecordNotFound
+       render :json => {}, :status => :not_found
+     end
+   end
+
   private
 
   def user_params
