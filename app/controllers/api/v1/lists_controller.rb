@@ -22,6 +22,16 @@ class Api::V1::ListsController < Api::V1::BaseController
     render json: list, status: 200
   end
 
+  def destroy
+     begin
+       list = List.find(params[:id])
+       list.destroy
+       render json: {}, status: :success
+     rescue ActiveRecord::RecordNotFound
+       render :json => {}, :status => :not_found
+     end
+   end
+
   private
 
   def set_user
