@@ -58,5 +58,17 @@ RSpec.describe Api::V1::UsersController, type: :controller do
         expect(json['name']).to eq(user.name)
       end
     end
+
+    describe "DELETE destroy" do
+      it "deletes the user" do
+        delete :destroy, { id: user.id }
+        count = User.where({id: user.id }).size
+        expect(count).to eq 0
+      end
+
+      it "returns http content not found" do
+        expect(response).to have_http_status(:success)
+      end
+    end
   end
 end
