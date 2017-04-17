@@ -17,7 +17,7 @@ users = User.all
 25.times do
   List.create!(
     user:         users.sample,
-    public:       Faker::Boolean.boolean(0.5),
+    permission:   Faker::Number.between(0, 2),
     title:        Faker::Hipster.word,
     description:  Faker::Hipster.sentence(3)
   )
