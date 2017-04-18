@@ -38,6 +38,6 @@ class Api::V1::ListsController < Api::V1::BaseController
   end
 
   def list_params
-    params.require(:list).permit(:title, :description, :user_id)
+    params.require(:list).permit(:title, :description, :permission, :user_id)
   end
 end
