@@ -29,7 +29,8 @@ lists = List.all
   Item.create!(
     list:   lists.sample,
     name:   Faker::Lorem.word,
-    body:   Faker::Hipster.paragraph(2)
+    body:   Faker::Hipster.paragraph(2),
+    completed: Faker::Boolean.boolean(0.5)
   )
 end
 items = Item.all
