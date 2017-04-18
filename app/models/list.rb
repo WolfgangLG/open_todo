@@ -7,5 +7,5 @@ class List < ActiveRecord::Base
   PERMISSIONS = %w{ confidential viewable open }
 
   validates :title, presence: true
-  validates :permission, inclusion: PERMISSIONS
+  validates :permission, presence: true
 end

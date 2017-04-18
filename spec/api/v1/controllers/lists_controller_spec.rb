@@ -5,7 +5,6 @@ RSpec.describe Api::V1::ListsController, type: :controller do
   let(:my_list) { create(:list, user: user) }
   let(:json) { JSON.parse(response.body) }
 
-
   context "authenticated user" do
     before do
       controller.request.env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Basic.encode_credentials(user.name, user.password_digest)
@@ -24,6 +23,23 @@ RSpec.describe Api::V1::ListsController, type: :controller do
       end
 
       it "creates a list with the correct attributes" do
+        expect(json["title"]).to eq(@new_list.title)
+        expect(json["description"]).to eq(@new_list.description)
+      end
+    end
+
+    describe "PUT update" do
+      before { put :update, user_id: user.id, id: my_list.id, list: { title: @new_list.title}, description: @new_list.description, permission: @new_list.permission  }
+
+      it "returns http success" do
+        expect(response).to have_http_status(:success)
+      end
+
+      it "returns json content type" do
+        expect(response.content_type).to eq 'application/json'
+      end
+
+      it "updates a list with the correct attributes" do
         expect(json["title"]).to eq(@new_list.title)
         expect(json["description"]).to eq(@new_list.description)
       end
