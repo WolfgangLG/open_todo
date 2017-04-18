@@ -6,7 +6,6 @@ RSpec.describe Item, type: :model do
   let(:item) { create(:item, list: list) }
 
   it { is_expected.to validate_presence_of(:name) }
-  it { is_expected.to validate_presence_of(:completed)}
 
   describe "attributes" do
     it "should have name and body attributes" do
