@@ -72,5 +72,17 @@ RSpec.describe Api::V1::ListsController, type: :controller do
         expect(json{0}['title']).to eq(my_list.title)
       end
     end
+
+    describe "DELETE destroy" do
+      it "deletes the list" do
+        delete :destroy, { user_id: user.id, id: my_list.id }
+        count = List.where({id: my_list.id }).size
+        expect(count).to eq 0
+      end
+
+      it "returns http content not found" do
+        expect(response).to have_http_status(:success)
+      end
+    end
   end
 end
