@@ -13,7 +13,7 @@ RSpec.describe Api::V1::ItemsController, type: :controller do
     end
 
     describe "POST create" do
-      before { post :create, list_id: my_list.id, item: { name: @new_item.name, body: @new_item.body} }
+      before { post :create, list_id: my_list.id, item: { name: @new_item.name, body: @new_item.body, completed: @new_item.completed} }
 
       it "returns http success" do
         expect(response).to have_http_status(:success)
@@ -26,6 +26,24 @@ RSpec.describe Api::V1::ItemsController, type: :controller do
       it "creates a item with the correct attributes" do
         expect(json["name"]).to eq(@new_item.name)
         expect(json["body"]).to eq(@new_item.body)
+      end
+    end
+
+    describe "PUT update" do
+      before { put :update, list_id: my_list.id, id: my_item.id, item: { name: @new_item.name, body: @new_item.body, completed: @new_item.completed } }
+
+      it "returns http success" do
+        expect(response).to have_http_status(:success)
+      end
+
+      it "returns json content type" do
+        expect(response.content_type).to eq 'application/json'
+      end
+
+      it "updates an item with the correct attributes" do
+        expect(json["name"]).to eq(@new_item.name)
+        expect(json["body"]).to eq(@new_item.body)
+        expect(json["completed"]).to eq(@new_item.completed)
       end
     end
 

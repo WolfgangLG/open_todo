@@ -5,6 +5,7 @@ RSpec.describe List, type: :model do
   let(:list) { create(:list, user: user) }
 
   it { is_expected.to validate_presence_of(:title) }
+  it { is_expected.to validate_presence_of(:permission)}
 
   describe "attributes" do
     it "should have title and description attributes" do
