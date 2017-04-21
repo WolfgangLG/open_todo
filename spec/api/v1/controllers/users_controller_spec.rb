@@ -4,9 +4,32 @@ RSpec.describe Api::V1::UsersController, type: :controller do
   let(:user) { create(:user) }
   let(:json) { JSON.parse(response.body) }
 
+  context "unauthenticated user" do
+    it "GET index returns http unauthenticated" do
+      get :index
+      expect(response).to have_http_status(401)
+    end
+
+    it "GET show returns http unauthenticated" do
+      get :show, id: user.id
+      expect(response).to have_http_status(401)
+    end
+
+    it "POST create returns http unauthenticated" do
+      new_user = build(:user)
+      post :create, user: { name: new_user.name, email: new_user.email, password: new_user.password_digest }
+      expect(response).to have_http_status(401)
+    end
+
+    it "DELETE destroy returns http unauthenticated" do
+      delete :destroy, { id: user.id }
+      expect(response).to have_http_status(401)
+    end
+  end
+
   context "authenticated user" do
     before do
-      controller.request.env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Basic.encode_credentials(user.name, user.password_digest)
+      controller.request.env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Token.encode_credentials(user.auth_token)
       @new_user = build(:user)
     end
 
