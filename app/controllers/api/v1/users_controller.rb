@@ -1,7 +1,6 @@
 class Api::V1::UsersController < Api::V1::BaseController
   before_action :authenticated?
 
-
   def create
     user = User.new(user_params)
     if user.valid?
