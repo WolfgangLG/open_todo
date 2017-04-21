@@ -12,10 +12,20 @@ class Api::V1::BaseController < ApplicationController
     render json: { error: "Record not found", status: 404 }, status: 404
   end
 
+  def authenticate_user
+    set_user_auth
+  end
+
   private
   def authenticated?
-    authenticate_or_request_with_http_basic { |username, password|
-      User.where( name: username, password_digest: password).present?
+    authenticate_or_request_with_http_token { |token, options|
+      User.where(auth_token: token).present?
+    }
+  end
+
+  def set_user_auth
+    authenticate_or_request_with_http_token { |token, options|
+      @current_user = User.find_by( auth_token: token)
     }
   end
 end
