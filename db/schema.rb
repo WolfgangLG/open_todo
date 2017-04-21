@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170418224034) do
+ActiveRecord::Schema.define(version: 20170420225125) do
 
   create_table "items", force: :cascade do |t|
     t.integer  "list_id"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170418224034) do
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
+    t.string   "auth_token"
   end
 
 end
