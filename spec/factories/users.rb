@@ -3,6 +3,7 @@ FactoryGirl.define do
   factory :user do
     name Faker::Name.name
     email Faker::Internet.email
-    password_digest pw
+    password pw
+    password_confirmation pw
   end
 end
