@@ -7,7 +7,7 @@ RSpec.describe Api::V1::ListsController, type: :controller do
 
   context "authenticated user" do
     before do
-      controller.request.env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Basic.encode_credentials(user.name, user.password_digest)
+      controller.request.env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Token.encode_credentials(user.auth_token)
       @new_list = build(:list)
     end
 
