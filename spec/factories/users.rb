@@ -1,8 +1,8 @@
 FactoryGirl.define do
-  pw = Faker::Lorem.word
+  pw = Faker::Lorem.characters(10)
   factory :user do
     name Faker::Name.name
-    email Faker::Internet.email
+    sequence(:email){|n| "user#{n}@open_todo.com" }
     password pw
     password_confirmation pw
   end

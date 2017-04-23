@@ -17,9 +17,11 @@ class Api::V1::BaseController < ApplicationController
   end
 
   private
+
+
   def authenticated?
     authenticate_or_request_with_http_token { |token, options|
-      User.where(auth_token: token).present?
+      @current_user = User.find_by(auth_token: token)
     }
   end
 
