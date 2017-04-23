@@ -1,6 +1,7 @@
 class Api::V1::ListsController < Api::V1::BaseController
   before_action :authenticated?
   before_action :set_user
+  before_action :authorize_user, only: [:update, :destroy]
 
   def create
     list = @user.lists.new(list_params)
@@ -43,6 +44,13 @@ class Api::V1::ListsController < Api::V1::BaseController
    end
 
   private
+
+  def authorize_user
+    list = List.find(params[:id])
+    unless authenticated? == list.user
+      render json: { error: "Not Authorized", status: 403 }, status: 403
+    end
+  end
 
   def set_user
     @user = User.find(params[:user_id])

@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Api::V1::ItemsController, type: :controller do
   let(:user) { create(:user) }
   let(:my_list) { create(:list, user: user) }
-  let!(:my_item) { create(:item, list: my_list) }
+  let(:my_item) { create(:item, list: my_list, user: user) }
   let(:json) { JSON.parse(response.body) }
 
   context "authenticated user" do
