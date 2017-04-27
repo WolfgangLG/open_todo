@@ -7,7 +7,7 @@ class Api::V1::UsersController < Api::V1::BaseController
       user.save!
       render json: user, status: 200
     else
-      render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
+      render json: { errors: user.errors.full_messages }, status: 400
     end
   end
 
@@ -34,6 +34,6 @@ class Api::V1::UsersController < Api::V1::BaseController
   private
 
   def user_params
-    params.require(:user).permit(:name, :password_digest, :email)
+    params.require(:user).permit(:name, :email, :password)
   end
 end

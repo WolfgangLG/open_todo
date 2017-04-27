@@ -23,6 +23,8 @@ gem 'bootstrap'
 gem 'figaro'
 gem 'foundation-rails'
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'bcrypt', '~> 3.1.5'
+
 
 group :development, :test do
   gem 'byebug'

@@ -13,19 +13,14 @@ class Api::V1::BaseController < ApplicationController
   end
 
   def authenticate_user
-    set_user_auth
+    authenticated?
   end
 
   private
+
   def authenticated?
     authenticate_or_request_with_http_token { |token, options|
-      User.where(auth_token: token).present?
-    }
-  end
-
-  def set_user_auth
-    authenticate_or_request_with_http_token { |token, options|
-      @current_user = User.find_by( auth_token: token)
+      @current_user = User.find_by(auth_token: token)
     }
   end
 end
